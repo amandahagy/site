@@ -1,8 +1,12 @@
 body{
-    margin: 8px 0px 0px 0px;
-    width: 100vw;
-    height: 100vw;
-    background-color: #1DB954;
+    width: 100%;
+    height: 100%;
+    border-top: 1vw solid;
+    border-top-color: #1DB954;
+    margin: 0;
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .grid{
@@ -13,9 +17,12 @@ body{
     "header header header header header"
     "sidebar sidebar sidebar sidebar sidebar"
     "section section section section section"
+    "main main main main main"
     "footer footer footer footer footer";
-    /* "main main main main" */
-    
+}
+
+.textoprincipal{
+    z-index:1;
 }
 
 header{
@@ -26,22 +33,21 @@ header{
     background-repeat: no-repeat;
     display: flex;
     grid-area: header;
-    height: 400px;
+    height: 58vw;
     justify-content: space-evenly;
-    padding: 0 10px;
-    width: 100%;
+    width: 100vw;
 }
 
 header .it-header p:nth-child(1){
     color: white;
     font-family: 'Pacifico', cursive;
-    font-size: 28pt;
+    font-size: 70pt;
 }
 
 header .it-header p:nth-child(2){
     color: white;
     font-family: sans-serif;
-    font-size: 14pt;
+    font-size: 20pt;
     line-height: 1.5;
 }
 
@@ -51,42 +57,40 @@ span{
 
 .hand-header{
     margin: 0;
-    height: 100%;
 }
 
 .hand-header img{
-    height: 85%;
-    padding: 60px 0 0 0;
+    width: 42vw;
+    padding: 10vw 0 0 0;
+    z-index:0;
 }
 
 .it-header{
-    height: 100%;
-    padding: 80px 0 0 0;
-    width: 350px;
+    padding: 5vw 0 10vw 3vw;
+    width: 30vw;
 }
 
 .icones-header{
     align-items: center;
     display: flex;
     justify-content: space-around;
-    width: 50%;
+    width: 70%;
 }
 
 .icone-ios, .icone-android, .icone-windows{
     background-color: black;
-    border: 1px solid black;
+    border: 0.5vw solid black;
     border-radius: 100%;
     display: flex;
-    height: 50%;
     opacity: 0.5;
-    padding: 10px;
+    padding: 1vw;
 }
 
 .icone-ios img, .icone-android img, .icone-windows img{
-    height: 20px;
+    height: 2vw;
     align-items: center;
     justify-content: center;
-    width: 20px;
+    width: 2vw;
 }
 
 .icone-ios:hover, .icone-android:hover, .icone-windows:hover{
@@ -140,21 +144,6 @@ span{
     font-size: 11pt;
     line-height: 1.8;
 }
-
-/* main{
-    grid-area: main;
-    background-color: green;
-}
-
-section{
-    grid-area: section;
-    background-color: red;
-}
-
-footer{
-    grid-area: footer;
-    background-color: blue;
-} */
 
 section p:nth-child(1){
     font-size: 14pt;
@@ -229,6 +218,7 @@ footer{
     width: 100%;   
     display: flex;
     justify-content: center;
+    height: auto;
 }
 
 .contact{
@@ -249,4 +239,94 @@ footer{
 
 .contact a:hover{
     color: #1DB954;
+}
+
+main{
+    align-items: center;
+    background-color: white;
+    display: flex;
+    grid-area: main;
+    height: auto;
+    justify-content: space-around;
+    padding: 50px 0;
+    width: 100%;
+}
+
+main .section-conteudo{
+    text-align: center;
+    width: 900px;
+}
+
+main p:nth-child(1), main p:nth-child(5){
+    color: grey;
+    font-family: sans-serif;
+    font-size: 11pt;
+}
+
+main p:nth-child(2){
+    font-family: sans-serif;
+    font-size: 14pt;
+}
+
+main .section-img{
+    display: flex;
+    justify-content: space-around;
+}
+
+main .section-img2{
+    background-color: #1DB954;
+    height: 48px;
+    width: 48px;
+}
+
+main .section-img img{
+    height: 100%;
+}
+
+main .section-img img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+main p:nth-child(4){
+    font-family: sans-serif;
+    font-size: 18pt;
+    padding: 20px 0 0 0;
+}
+
+main .section-icons{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+main .section-icons2{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+.icon-twitter, .icon-facebook, .icon-pinterest, .icon-google, .icon-linkedin, .icon-yt{
+    background-color: darkgrey;
+    border: 1px solid darkgray;
+    border-radius: 100%;
+    display: flex;
+    height: 50%;
+    padding: 10px;
+}
+
+.icon-twitter img, .icon-facebook img, .icon-pinterest img, .icon-google img, .icon-linkedin img, .icon-yt img{
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+}
+
+.icon-twitter:hover, .icon-facebook:hover, .icon-pinterest:hover, .icon-google:hover, .icon-linkedin:hover, .icon-yt:hover{
+    background-color: #1DB954;
+    border: 1px solid #1DB954;
+    opacity: 1;
+    cursor: pointer;
 }
