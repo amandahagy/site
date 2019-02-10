@@ -1,7 +1,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    border-top: 1vw solid;
+    border-top: 0.5vw solid;
     border-top-color: #1DB954;
     margin: 0;
     position: relative;
@@ -11,14 +11,14 @@ body{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, minmax(100px, auto));
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, minmax(0px, auto));
     grid-template-areas: 
-    "header header header header header"
-    "sidebar sidebar sidebar sidebar sidebar"
-    "section section section section section"
-    "main main main main main"
-    "footer footer footer footer footer";
+    "header"
+    "sidebar"
+    "section"
+    "main"
+    "footer";
 }
 
 .textoprincipal{
@@ -68,26 +68,23 @@ span{
 .it-header{
     padding: 5vw 0 10vw 3vw;
     width: 30vw;
+    height: auto;
 }
 
 .icones-header{
-    align-items: center;
     display: flex;
     justify-content: space-around;
-    width: 70%;
 }
 
 .icone-ios, .icone-android, .icone-windows{
     background-color: black;
     border: 0.5vw solid black;
     border-radius: 100%;
-    display: flex;
     opacity: 0.5;
     padding: 1vw;
 }
 
 .icone-ios img, .icone-android img, .icone-windows img{
-    height: 12w;
     align-items: center;
     justify-content: center;
     width: 2vw;
@@ -100,15 +97,17 @@ span{
     cursor: pointer;
 }
 
+aside{
+    margin: 0 13vw 0 13vw;
+}
+
 .sidebar{
     align-items: center;
     background-color: white;
     display: flex;
     grid-area: sidebar;
-    height: auto;
-    justify-content: space-around;
-    padding: 50px 70px;
-    width: 100%;
+    height: 30vh;
+    justify-content: center;
 }
 
 .sidebar-icones{
@@ -119,18 +118,14 @@ span{
 
 .sidebar-icones img{
     background-color: #1DB954;
-    border: 1px solid #1DB954;
     border-radius: 100%;
     display: flex;
-    height: 25%;
-    padding: 10px;
+    padding: 1vw;
+    width: 1.5vw;
 }
-
 
 .sidebar-c1, .sidebar-c2, .sidebar-c3 {
     text-align: center;
-    height: 150px;
-    width: 290px;
 }
 
 .sidebar-c1 p:nth-child(2), .sidebar-c2 p:nth-child(2), .sidebar-c3 p:nth-child(2){
@@ -143,22 +138,8 @@ span{
     font-family: sans-serif;
     font-size: 11pt;
     line-height: 1.8;
+    padding: 0 5px 0 5px;
 }
-
-/* main{
-    grid-area: main;
-    background-color: green;
-}
-
-section{
-    grid-area: section;
-    background-color: red;
-}
-
-footer{
-    grid-area: footer;
-    background-color: blue;
-} */
 
 section p:nth-child(1){
     font-size: 14pt;
@@ -173,19 +154,22 @@ section p:nth-child(2){
 .section{
     grid-area: section;
     background-color: rgb(224, 222, 222);
-    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    padding: 50px 76px;
-    height: auto;
+    padding: 5vw 5vw 5vw 5vw;
+    height: 24vw;
+    width: 100%;
     font-family: sans-serif;
 }
 
 .notificacao{
     width: 40vw;
-    height: 300px;
+    height: auto;
+    padding: 0 2vw 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .inputs{
@@ -198,7 +182,8 @@ section p:nth-child(2){
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     border-right: none; 
-    border: 1px solid rgb(224, 222, 222);   
+    border: 1px solid rgb(224, 222, 222);
+    font-size: 12pt;
 }
 
 .inputs [type=text]:hover{
@@ -225,6 +210,8 @@ section p:nth-child(2){
     -moz-border-radius: 8px;
     border-radius: 8px; 
     overflow: hidden; 
+    width: 50%;
+    height: auto;
 }
 
 footer{
@@ -263,8 +250,7 @@ main{
     grid-area: main;
     height: auto;
     justify-content: space-around;
-    padding: 50px 0;
-    width: 100%;
+    height: 41vw;
 }
 
 main .section-conteudo{
@@ -273,19 +259,21 @@ main .section-conteudo{
 }
 
 main p:nth-child(1), main p:nth-child(5){
-    color: grey;
+    color: rgb(152, 160, 168);
     font-family: sans-serif;
-    font-size: 11pt;
+    font-size: 12pt;
+    line-height: 1.5
 }
 
 main p:nth-child(2){
     font-family: sans-serif;
-    font-size: 14pt;
+    font-size: 11pt;
 }
 
 main .section-img{
     display: flex;
     justify-content: space-around;
+    padding: 0vw;
 }
 
 main .section-img2{
@@ -320,7 +308,7 @@ main .section-icons2{
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-    width: 35%;
+    width: 50%;
 }
 
 .icon-twitter, .icon-facebook, .icon-pinterest, .icon-google, .icon-linkedin, .icon-yt{
@@ -329,14 +317,14 @@ main .section-icons2{
     border-radius: 100%;
     display: flex;
     height: 50%;
-    padding: 10px;
+    padding: 1vw;
 }
 
 .icon-twitter img, .icon-facebook img, .icon-pinterest img, .icon-google img, .icon-linkedin img, .icon-yt img{
-    height: 15px;
+    height: 2vw;
     align-items: center;
     justify-content: center;
-    width: 15px;
+    width: 2vw;
 }
 
 .icon-twitter:hover, .icon-facebook:hover, .icon-pinterest:hover, .icon-google:hover, .icon-linkedin:hover, .icon-yt:hover{
@@ -344,4 +332,23 @@ main .section-icons2{
     border: 1px solid #1DB954;
     opacity: 1;
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    section{
+         
+
+    }
+    .section{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .texto{
+        width: 80vw;
+    }
+    .video{
+        width: 95vw;
+        
+    }
 }
